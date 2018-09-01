@@ -1,0 +1,25 @@
+.center {
+  display: flex;
+  justify-content: center;
+}
+
+.inputContainer {
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-gap: 5px;
+}
+
+.gridContainer {
+  display: grid;
+  grid-template-columns: auto auto auto auto auto;
+  grid-gap: 4px;
+  margin: 10px;
+}
+
+.gridContainer div {
+  padding: 2px;
+  border: 1px solid black;
+  border-radius: 5px;
+  text-align: center;
+  width: 5em;
+}
