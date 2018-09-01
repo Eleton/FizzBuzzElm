@@ -4389,10 +4389,6 @@ var elm$core$String$toInt = _String_toInt;
 var author$project$Main$update = F2(
 	function (msg, model) {
 		switch (msg.$) {
-			case 'Increment':
-				return model;
-			case 'Decrement':
-				return model;
 			case 'ChangeNumber':
 				var text = msg.a;
 				return A2(
@@ -4939,6 +4935,7 @@ var elm$virtual_dom$VirtualDom$toHandlerInt = function (handler) {
 	}
 };
 var elm$html$Html$div = _VirtualDom_node('div');
+var elm$html$Html$h1 = _VirtualDom_node('h1');
 var elm$html$Html$input = _VirtualDom_node('input');
 var elm$html$Html$span = _VirtualDom_node('span');
 var elm$virtual_dom$VirtualDom$text = _VirtualDom_text;
@@ -4998,6 +4995,22 @@ var author$project$Main$view = function (model) {
 			]),
 		_List_fromArray(
 			[
+				A2(
+				elm$html$Html$div,
+				_List_fromArray(
+					[
+						elm$html$Html$Attributes$class('center')
+					]),
+				_List_fromArray(
+					[
+						A2(
+						elm$html$Html$h1,
+						_List_Nil,
+						_List_fromArray(
+							[
+								elm$html$Html$text('Fizz all the Buzz')
+							]))
+					])),
 				A2(
 				elm$html$Html$div,
 				_List_fromArray(

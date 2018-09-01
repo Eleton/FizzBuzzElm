@@ -1,5 +1,5 @@
 import Browser
-import Html exposing (Html, button, div, span, text, input)
+import Html exposing (Html, h1, div, span, text, input)
 import Html.Events exposing (onInput)
 import Html.Attributes exposing (..)
 
@@ -18,21 +18,13 @@ init =
 -- UPDATE
 
 type Msg
-  = Increment
-  | Decrement
-  | ChangeNumber String
+  = ChangeNumber String
   | ChangeFizz String
   | ChangeBuzz String
 
 update : Msg -> Model -> Model
 update msg model =
   case msg of
-    Increment ->
-      model
-
-    Decrement ->
-      model
-
     ChangeNumber text ->
       Debug.log (Debug.toString text)
       { model | number = (Maybe.withDefault 100 (String.toInt text)) }
@@ -51,7 +43,8 @@ update msg model =
 view : Model -> Html Msg
 view model =
   div [ class "content" ]
-  [ div [ class "center" ]
+  [ div [ class "center" ] [ h1 [] [ text "Fizz all the Buzz!"] ]
+  , div [ class "center" ]
     [ div [ class "inputContainer" ]
       [ span [] [ text "Amount: "]
       , input

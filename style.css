@@ -6,12 +6,24 @@
 .inputContainer {
   display: grid;
   grid-template-columns: auto auto;
-  grid-gap: 5px;
+  grid-row-gap: 5px;
+  grid-column-gap: 25px;
+  font-size: 1.5em;
+}
+
+.inputContainer span {
+  text-align: right;
+}
+
+.inputContainer input {
+  font-size: 1em;
+  width: 4em;
 }
 
 .gridContainer {
+  width: 60%;
   display: grid;
-  grid-template-columns: auto auto auto auto auto;
+  grid-template-columns: 20% 20% 20% 20% 20%;
   grid-gap: 4px;
   margin: 10px;
 }
@@ -21,5 +33,25 @@
   border: 1px solid black;
   border-radius: 5px;
   text-align: center;
-  width: 5em;
+  font-size: 1.2em;
+  min-width: 5em;
+}
+
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 480px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: portrait) {
+    .inputContainer {
+      font-size: 3em;
+    }
+
+    .gridContainer {
+      width: 90%;
+    }
+
+    .gridContainer div {
+      min-width: 3em;
+      font-size: 1em
+    }
 }
